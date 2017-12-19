@@ -1,8 +1,8 @@
-FROM ruby:2.4.2-alpine3.6
+FROM ruby:2.3.6-alpine3.4
 
 ENV APP_HOME /usr/src/app
 
-RUN apk add -U git build-base postgresql-dev sqlite-dev nodejs tzdata libxml2-dev libxslt-dev
+RUN apk add -U git build-base postgresql-dev sqlite-dev nodejs nodejs-npm tzdata libxml2-dev libxslt-dev
 
 RUN mkdir -p $APP_HOME
 WORKDIR $APP_HOME
